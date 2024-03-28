@@ -14,7 +14,31 @@ public class Main {
 
         childReferredToAsBase.recommendedMethod();
         System.out.println("-".repeat(30));
-
         child.recommendedMethod();
+
+
+        // Static methods now
+        System.out.println("-".repeat(30));
+        parent.recommendedStatic();
+        System.out.println("-".repeat(30));
+        childReferredToAsBase.recommendedStatic();
+        System.out.println("-".repeat(30));
+        child.recommendedStatic();
+
+
+        System.out.println("-".repeat(30));
+        BaseClass.recommendedStatic();
+        ChildClass.recommendedStatic();
+
+        String xArgument = "This is all I've got to say about Section ";
+        doXYZ(xArgument, 16);
+
     }
+
+
+    private static void doXYZ (final String x, int y){
+        final String c = x + y;
+        System.out.println("c: " + c);
+    }
+
 }
